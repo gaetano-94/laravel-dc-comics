@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
 
-            $table->string('thumb');
-            $table->string('title', 20);
-            $table->string('series', 30);
-            $table->date('sale_date');
-            $table->decimal('price', 4, 2);
-            $table->text('description');
+            $table->text('immagine');
+            $table->string('titolo', 100);
+            $table->string('serie', 50);
+            $table->date('data_di_vendita');
+            $table->string('prezzo', 20);
+            $table->text('descrizione');
 
             $table->timestamps();
         });
     }
-
+    // php artisan db:seed --class=ComicSeeder
     /**
      * Reverse the migrations.
      */
