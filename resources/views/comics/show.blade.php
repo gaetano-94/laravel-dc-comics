@@ -19,7 +19,7 @@
             <div class="card-body">
                 <h2><strong>Titolo:</strong> {{ $comic->titolo }}</h2>
                 <h3><strong>Serie:</strong> {{ $comic->serie }}</h3>
-                <h4><strong>Data di vendita:</strong> {{ $comic->deta_di_vendita }}</h4>
+                <h4><strong>Data di vendita:</strong> {{ $comic->data_di_vendita }}</h4>
                 <h5><strong>Prezzo:</strong> {{ $comic->prezzo }}</h5>
                 <p class="card-text"><strong>Descrizione:</strong> {{ $comic->descrizione }}</p>
                 <a href="{{ route('comics.index') }}" class="btn btn-primary mt-2" alt="Comic">Torna alla
