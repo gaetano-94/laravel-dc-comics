@@ -15,6 +15,8 @@
 <body>
     <div class="container">
         <h1>Nuovo Fumetto</h1>
+        <a href="{{ route('comics.index') }}" class="btn btn-primary my-2" alt="Comic">Torna alla
+            lista dei Fumetti</a>
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="mb-3">
