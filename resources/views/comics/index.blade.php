@@ -26,6 +26,14 @@
                     <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary mt-2"
                         alt="Comic">Modifica un nuovo
                         Fumetto</a>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+
+                        @method('DELETE')
+
+                        <input type="submit" value="Cancella" class="btn btn-danger my-2">
+
+                    </form>
                 </div>
             </div>
         @endforeach
