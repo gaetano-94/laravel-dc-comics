@@ -37,12 +37,7 @@ class ComicController extends Controller
 
         $comic = new Comic();
 
-        $comic->immagine = $data['immagine'];
-        $comic->titolo = $data['titolo'];
-        $comic->serie = $data['serie'];
-        $comic->data_di_vendita = $data['data_di_vendita'];
-        $comic->prezzo = $data['prezzo'];
-        $comic->descrizione = $data['descrizione'];
+        $comic->fill($data);
 
         $comic->save();
 
@@ -52,10 +47,17 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Comic $comic)
+    public function show(string $id)
     {
 
-        return view('comics.show', compact('comic'));
+        $comic = Comic::findOrFail($id);
+
+        $data = [
+            'comic' => $comic
+        ];
+
+
+        return view('comics.show', $data);
     }
 
     /**
@@ -70,9 +72,13 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

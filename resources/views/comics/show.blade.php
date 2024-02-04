@@ -17,6 +17,7 @@
     <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top">
         <div class="card mb-3" style="width: 46rem;">
             <div class="card-body border bg-warning">
+                <img class="img-fluid w-100" src="{{ $comic->immagine }}" alt="{{ $comic->immagine }}">
                 <h2><strong>Titolo:</strong> {{ $comic->titolo }}</h2>
                 <h3><strong>Serie:</strong> {{ $comic->serie }}</h3>
                 <h4><strong>Data di vendita:</strong> {{ $comic->data_di_vendita }}</h4>
