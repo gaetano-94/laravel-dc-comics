@@ -13,8 +13,8 @@
 </head>
 
 <body class="bg-secondary">
-    <h1 class="text-center py-5 text-uppercase">Elenco Fumetti</h1>
-    <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top">
+    <h1 class="text-center py-4 text-uppercase">Elenco Fumetti</h1>
+    <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top mb-4">
         @foreach ($comics as $comic)
             <div class="card" style="width: 30rem;">
                 <div class="card-body border bg-warning">
