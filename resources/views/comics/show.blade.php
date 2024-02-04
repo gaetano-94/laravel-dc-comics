@@ -15,7 +15,7 @@
 <body class="bg-secondary">
     <h1 class="text-center py-3 text-uppercase">Elenco Fumetti</h1>
     <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top">
-        <div class="card mb-3" style="width: 30rem;">
+        <div class="card mb-3" style="width: 46rem;">
             <div class="card-body border bg-warning">
                 <h2><strong>Titolo:</strong> {{ $comic->titolo }}</h2>
                 <h3><strong>Serie:</strong> {{ $comic->serie }}</h3>
