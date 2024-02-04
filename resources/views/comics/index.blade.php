@@ -13,16 +13,18 @@
 </head>
 
 <body class="bg-secondary">
-    <h1 class="text-center py-4 text-uppercase">Elenco Fumetti</h1>
+    <h1 class="text-center py-4 text-uppercase text-white">Elenco dei Fumetti</h1>
     <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top mb-4">
         @foreach ($comics as $comic)
             <div class="card" style="width: 30rem;">
                 <div class="card-body border bg-warning">
                     <h2><strong>Titolo:</strong> {{ $comic->titolo }}</h2>
-                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary mt-2"
-                        alt="Comic">Dettaglo
+                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info mt-2" alt="Comic">Dettaglo
                         Fumetto</a>
-                    <a href="{{ route('comics.create') }}" class="btn btn-primary mt-2" alt="Comic">Crea un nuovo
+                    <a href="{{ route('comics.create') }}" class="btn  btn-success mt-2" alt="Comic">Crea un nuovo
+                        Fumetto</a>
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary mt-2"
+                        alt="Comic">Modifica un nuovo
                         Fumetto</a>
                 </div>
             </div>

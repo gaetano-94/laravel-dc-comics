@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-secondary">
-    <h1 class="text-center py-3 text-uppercase">Elenco Fumetti</h1>
+    <h1 class="text-center py-3 text-uppercase text-white">Dettaglio del Fumetto</h1>
     <div class="container d-flex flex-wrap gap-3 justify-content-center align-items-top">
         <div class="card mb-3" style="width: 46rem;">
             <div class="card-body border bg-warning">
