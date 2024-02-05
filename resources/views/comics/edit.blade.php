@@ -44,7 +44,7 @@
                 <label class="form-label">Descrizione</label>
                 <textarea class="form-control" name="descrizione" id="" cols="30" rows="10">{{ $comic->descrizione }}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Modifica Fumetto</button>
+            <button type="submit" class="btn btn-primary mb-3">Modifica Fumetto</button>
 
         </form>
     </div>

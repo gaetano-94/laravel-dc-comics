@@ -21,29 +21,60 @@
             @csrf
             <div class="mb-3">
                 <label class="form-label">Immagine</label>
-                <input type="text" class="form-control" name="immagine">
+                <input type="text" class="form-control @error('immagine') is-invalid
+                 @enderror"
+                    name="immagine">
+                @error('immagine')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label">Titolo</label>
-                <input type="text" class="form-control" name="titolo">
+                <input type="text" class="form-control @error('titolo') is-invalid
+                 @enderror"
+                    name="titolo">
+                @error('titolo')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label">Serie</label>
-                <input type="text" class="form-control" name="serie">
+                <input type="text" class="form-control @error('serie') is-invalid
+                 @enderror"
+                    name="serie">
+                @error('serie')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label">Data di Vendita</label>
-                <input type="text" class="form-control" name="data_di_vendita">
+                <input type="text"
+                    class="form-control @error('data_di_vendita') is-invalid
+                 @enderror"
+                    name="data_di_vendita">
+                @error('data_di_vendita')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label">Prezzo</label>
-                <input type="text" class="form-control" name="prezzo">
+                <input type="text" class="form-control @error('prezzo') is-invalid
+                 @enderror"
+                    name="prezzo">
+                @error('prezzo')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label">Descrizione</label>
-                <textarea class="form-control" name="descrizione" id="" cols="30" rows="10"></textarea>
+                <textarea class="form-control @error('descrizione') is-invalid
+                 @enderror" name="descrizione"
+                    id="" cols="30" rows="10"></textarea>
+                @error('descrizione')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Crea Fumetto</button>
+            <button type="submit" class="btn btn-primary mb-3">Crea Fumetto</button>
         </form>
     </div>
 </body>
